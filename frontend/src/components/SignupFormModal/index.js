@@ -1,1 +1,3 @@
-export { default } from './SignupFormModal';
+import SignupFormModal from "./SignupFormModal";
+
+export default SignupFormModal;
