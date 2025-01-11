@@ -1,10 +1,34 @@
-.hidden{
-    display: none
-}
-
-.nav-wrapper{
+/* Hides elements completely */
+.hidden {
+    display: none; /* Hides the element */
+  }
+  
+  /* Styles the navigation wrapper */
+  .nav-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;  /* Vertically aligns items in the center */
     margin: 10px;
-}
+    padding: 0 15px; /* Optional: for better horizontal padding */
+  }
+  
+  /* Remove default list style from navigation */
+  nav ul {
+    list-style: none; /* Removes bullets */
+    padding: 0;        /* Removes padding */
+    margin: 0;         /* Removes margin */
+  }
+  
+  nav li {
+    display: inline-block; /* Makes the list items horizontal */
+  }
+  
+  /* Optional: Add responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .nav-wrapper {
+      flex-direction: column;  /* Stacks items vertically on smaller screens */
+      align-items: flex-start; /* Aligns items to the left */
+    }
+  }
+  

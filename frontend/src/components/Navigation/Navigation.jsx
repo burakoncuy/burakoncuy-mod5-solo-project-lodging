@@ -8,13 +8,15 @@ function Navigation({ isLoaded }) {
 
   return (
     <ul className='nav-wrapper'>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
+      <div>
+      <NavLink to="/">
+            <img src="../../../logo.png" alt="Logo"style={{ width: '150px', height: 'auto' }}/>
+          </NavLink>
+      </div>
       {isLoaded && (
-        <li>
+        <div>
           <ProfileButton user={sessionUser} />
-        </li>
+        </div>
       )}
     </ul>
   );
