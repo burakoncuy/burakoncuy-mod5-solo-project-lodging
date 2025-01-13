@@ -1,110 +1,85 @@
-
-const express = require('express')
+// backend/routes/api/session.js
+const express = require('express');
 const { Op } = require('sequelize');
 const bcrypt = require('bcryptjs');
+const { handleValidationErrors } = require('../../utils/validation');
+const { check } = require('express-validator');
 const { setTokenCookie, restoreUser } = require('../../utils/auth');
 const { User } = require('../../db/models');
-const { check, validationResult } = require('express-validator');
+
 const router = express.Router();
 
-
-// Middleware to validate login parameters
+// Define the validateLogin middleware
 const validateLogin = [
   check('credential')
     .exists({ checkFalsy: true })
-    .withMessage('Email or username is required.')
     .notEmpty()
-    .withMessage('Please provide a valid email or username.'),
+    .withMessage('Emal or username is required'),
   check('password')
     .exists({ checkFalsy: true })
-    .withMessage('Password is required.')
-    .notEmpty()
-    .withMessage('Please provide a password.'),
-
-(req, res, next) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({
-      message: 'Bad Request',
-      errors: errors.mapped(),
-    });
-  }
-  next();
-}
+    .withMessage('Password is required'),
+  handleValidationErrors
 ];
 
-// Log in
+// Log in route
 router.post(
-    '/',
-    validateLogin,
-    async (req, res, next) => {
-      const { credential, password } = req.body;
+  '/',
+  validateLogin,
+  async (req, res, next) => {
+    const { credential, password } = req.body;
 
-      try {
-      const user = await User.unscoped().findOne({
-        where: {
-          [Op.or]: {
-            username: credential,
-            email: credential
-          }
-        }
-      });
-
-      if (!user || !bcrypt.compareSync(password, user.hashedPassword.toString())) {
-     
-        return res.status(401).json({ message: 'Invalid credentials' });
+    const user = await User.unscoped().findOne({
+      where: {
+        [Op.or]: [{ username: credential }, { email: credential }]
       }
+    });
 
-      const safeUser = {
-        id: user.id,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        email: user.email,
-        username: user.username,
-      };
-
-      await setTokenCookie(res, safeUser);
-
-      return res.json({
-        user: safeUser
+    if (!user || !bcrypt.compareSync(password, user.hashedPassword.toString())) {
+      return res.status(401).json({
+        title: "Bad request.",
+        message: "Invalid credentials",
+        errors: { password: "Password is required" }
+        // Note: 'stack' is omitted intentionally
       });
-  
-    } catch (err) {
-      next(err);
+
     }
-  });
 
+    // Add firstName and lastName to the safeUser object
+    const safeUser = {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      username: user.username,
+    };
 
-// Log out
-router.delete(
-    '/',
-    (_req, res) => {
-      res.clearCookie('token');
-      return res.json({ message: 'success' });
-    }
-  );
+    await setTokenCookie(res, safeUser);
 
+    return res.json({ user: safeUser });
+  }
+);
 
-// Restore session user
-router.get(
-    '/',
-    (req, res) => {
-      const { user } = req;
-      if (user) {
-        const safeUser = {
-          id: user.id,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          email: user.email,
-          username: user.username,
-        };
-        return res.json({
-          user: safeUser
-        });
-      } else return res.json({ user: null });
-    }
-  );
+// Logout route
+router.delete('/', (_req, res) => {
+  res.clearCookie('token');
+  return res.json({ message: 'success' });
+});
 
-
+// Restore session user route
+router.get('/', restoreUser, (req, res) => {
+  const { user } = req;
+  if (user) {
+    const safeUser = {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: user.email,
+      username: user.username,
+    };
+    return res.json({ user: safeUser });
+  } else {
+    return res.json({ user: null });
+  }
+});
 
 module.exports = router;

@@ -1,49 +1,36 @@
-
-const express = require('express')
-const bcrypt = require('bcryptjs');
-const { setTokenCookie, requireAuth } = require('../../utils/auth');
-const { User, SpotImage, ReviewImage, Spot, Review, Booking } = require('../../db/models');
-const { check } = require('express-validator');
-const { handleValidationErrors, handleValidationErrors403 } = require('../../utils/validation');
+const express = require('express');
 const router = express.Router();
+const { requireAuth } = require('../../utils/auth');
+const { Reviewimage, Review } = require('../../db/models');
 
 
-// Delete a Review Image
-router.delete('/:imageId', requireAuth, async (req, res, next) => {
-    const { user } = req;
 
-    const reviewImageFromId = await ReviewImage.findOne({
-        where: {
-            id: req.params.imageId
-        },
+// DELETE a review image
+router.delete('/:imageId', requireAuth, async (req, res) => {
+  const { imageId } = req.params;
+  const userId = req.user.id;
+
+  try {
+    // Find the image including the associated Review to check ownership
+    const image = await Reviewimage.findByPk(imageId, {
+      include: [{
+        model: Review,
+        attributes: ['userId']
+      }]
     });
 
-    if (!reviewImageFromId) {
-        res.status(404);
-        return res.json({
-            "message": "Review Image couldn't be found"
-          })
+    // Check if the image exists and if the user owns the review
+    if (!image || image.Review.userId !== userId) {
+      return res.status(404).json({ message: "Review Image couldn't be found" });
     }
 
-    const review = await Review.findOne({
-        where: {
-            id: reviewImageFromId.reviewId
-        }
-    })
-
-    if (reviewImageFromId.userId !== req.user.id) {
-        return res.status(403).json({
-            "message": "Successfully deleted"
-        });
-    }
-
-    if (review.userId === user.id) {
-        await reviewImageFromId.destroy();
-        res.status(200).json({ "message": "Successfully deleted" })
-         
-    } 
-})
-
-
+    // Delete the image
+    await image.destroy();
+    res.status(200).json({ message: "Successfully deleted" });
+  } catch (error) {
+    // Handle any other errors
+    res.status(500).json({ message: "Failed to delete the image", error: error.message });
+  }
+});
 
 module.exports = router;
