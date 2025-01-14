@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Tooltip from '../Tooltip/Tooltip';
 import './SpotCard.css';
 
 const SpotCard = ({ spot, onClick, onDelete }) => {
+  const [tooltipVisible, setTooltipVisible] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
   const isLandingPage = location.pathname === '/';
   const isManageSpotsPage = location.pathname === '/spots/current';
 
   const previewImageUrl = spot.previewImage ? spot.previewImage : 'default-image-url';
+
   const averageRating = spot.avgRating ? parseFloat(spot.avgRating).toFixed(1) : 'New';
 
   const handleUpdateClick = (e) => {
@@ -21,13 +24,16 @@ const SpotCard = ({ spot, onClick, onDelete }) => {
     onDelete(spot.id);
   };
 
-  return (
+ return (
     <div
       key={spot.id}
       className="spot-tile"
-      onClick={() => onClick(spot.id)} // Handle tile click for navigation
+      onMouseEnter={() => setTooltipVisible(true)}
+      onMouseLeave={() => setTooltipVisible(false)}
+      onClick={() => onClick(spot.id)}
     >
       <img src={previewImageUrl} alt={spot.name} />
+      {isLandingPage && <Tooltip text={spot.name} visible={tooltipVisible} />}
       <div className="spot-info">
         <h3 className="spot-name">{spot.name}</h3>
         <p>{spot.city}, {spot.state}</p>

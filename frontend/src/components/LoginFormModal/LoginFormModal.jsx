@@ -19,15 +19,22 @@ function LoginFormModal() {
       .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) {
-          setErrors(data.errors);
+          setErrors({ credentials: "The provided credentials were invalid" });
         }
       });
   };
 
+  const handleDemoLogin = () => {
+    return dispatch(sessionActions.login({ credential: 'DemoUser', password: 'password' }))
+      .then(closeModal);
+  };
+
+  const isDisabled = credential.length < 4 || password.length < 6;
+
   return (
-    <div className='login-modal'>
-      <h1 className='login-header'>Log In</h1>
-      <form onSubmit={handleSubmit} className='login-form'>
+    <div id="modal-content">
+      <h1>Log In</h1>
+      <form onSubmit={handleSubmit}>
         <label>
           Username or Email
           <input
@@ -46,10 +53,11 @@ function LoginFormModal() {
             required
           />
         </label>
-        <div className="errors">
-          {errors.credential && <p>{errors.credential}</p>}
-        </div>
-        <button type="submit" className='login-button'>Log In</button>
+        {errors.credentials && (
+          <p className="error">{errors.credentials}</p>
+        )}
+        <button type="submit" disabled={isDisabled}>Log In</button>
+        <button type="button" onClick={handleDemoLogin}>Demo User</button>
       </form>
     </div>
   );

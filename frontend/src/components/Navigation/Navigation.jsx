@@ -6,17 +6,21 @@ import './Navigation.css';
 function Navigation({ isLoaded }) {
   const sessionUser = useSelector(state => state.session.user);
 
+
   return (
-    <ul className='nav-wrapper'>
-      <div>
-      <NavLink to="/">
-            <img src="../../../logo.png" alt="Logo"style={{ width: '150px', height: 'auto' }}/>
-          </NavLink>
-      </div>
+    <ul>
+      <li>
+        <NavLink exact to="/">Home</NavLink>
+      </li>
+      {sessionUser && (
+        <li>
+          <NavLink to="/spots/new">Create a New Spot</NavLink>
+        </li>
+      )}
       {isLoaded && (
-        <div>
+        <li>
           <ProfileButton user={sessionUser} />
-        </div>
+        </li>
       )}
     </ul>
   );
