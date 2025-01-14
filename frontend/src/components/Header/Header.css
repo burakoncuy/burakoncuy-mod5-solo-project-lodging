@@ -1,77 +1,69 @@
-/* .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-    border-bottom: 1px solid white;
-    width: 80%;
-    box-sizing: border-box;
-  } */
-  
-  .logo {
-    height: 250px;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    background: none;
-    display: block;
-  }
-  
-  .nav {
-    display: flex;
-    align-items:  center;
-  }
-  
-  .navigation {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navigation li {
-    margin: 0 10px;
-  }
-  
-  .navigation li a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .create-new-spot-link {
-    position: fixed;
-    text-decoration: none;
-    color: pink;
-    top: 80px;
-    /* Adjust this value as needed to position below the menu button */
-    right: 20px;
-    /* Adjust this value to match the right position of the profile button */
-    text-align: center;
-  }
-  
-  .create-new-spot-link:hover {
-    text-decoration: underline;
-  }
-  
-  .profile-icon {
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #000;
-  }
-  
-  .profile-dropdown {
-    position: fixed;
-    right: 0;
-    top: 60px;
-    /* Adjust this value to move the dropdown lower */
-    background-color:pink;
-    border: 1px solid teal;
-    padding: 10px;
-    list-style-type: none;
-    width: 150px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    z-index: 1000;
-  }
-  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 70px; /* Increased size for visibility */
+  cursor: pointer;
+}
+
+.center-text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.8rem; /* Slightly larger font */
+  font-weight: 600;
+  color: #000;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+
+.profile-button {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px; /* Added spacing */
+}
+
+.create-new-spot-link {
+  text-decoration: none;
+  color: pink;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 15px; /* Adjusted margin to avoid overlap */
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+.create-new-spot-link:hover {
+  text-decoration: underline;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+
+a.center-text-link{
+  color: teal;
+  font-style: italic;
+  font-size: xx-large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}

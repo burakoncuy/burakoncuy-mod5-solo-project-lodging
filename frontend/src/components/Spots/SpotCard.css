@@ -32,7 +32,7 @@
 
 .spot-info h3 {
   margin: 0 0 10px;
-  color: red;
+  color: black;
 }
 
 .spot-info p {
@@ -41,7 +41,7 @@
 }
 
 .spot-info .average-rating {
-  color: white;
+  color: black;
 }
 
 .spot-actions {
@@ -58,7 +58,7 @@
   border: none;
   border-radius: 4px;
   background-color: #3DC6C1;
-  color: white;
+  color: red;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,6 +73,9 @@
 
 .hosted-by {
   background-color: #333333;
-  color: whitesmoke;
+  color: pink;
   font-weight: bold;
 }
+ div spot-info .p{
+  color:red;
+ }

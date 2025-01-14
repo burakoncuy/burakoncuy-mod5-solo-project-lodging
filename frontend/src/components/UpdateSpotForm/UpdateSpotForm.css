@@ -1,11 +1,8 @@
-.update-spot-form-container {
+.update-spot-form-container { 
   max-width: 600px;
-  margin: 0 auto;
+  margin:auto;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background-color: #8e8e8e;
-}
+  }
 
 .update-spot-form-container h1 {
   font-size: 24px;
@@ -77,8 +74,8 @@
   border: none;
   border-radius: 5px;
   border: 2px solid #808080;
-  background: #8e8e8e;
-  color: black;
+  background: pink;
+  color: teal;
   font-size: 16px;
   cursor: pointer;
 }

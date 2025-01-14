@@ -4,7 +4,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: pink;
   }
   
   .create-spot-form-container h1 {
@@ -56,7 +56,7 @@
   .create-spot-form-container button {
     width: 100%;
     padding: 10px;
-    background-color: #3DC6C1;;
+    background-color: teal;;
     color: black;
     border: none;
     border-radius: 4px;

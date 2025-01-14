@@ -47,7 +47,7 @@
 
 .spot-info p {
   margin: 5px 0;
-  color: whitesmoke;
+  color: black;
 }
 
 .tooltip {
@@ -67,7 +67,7 @@
 }
 
 .spot-name {
-  color: #333;
+  color: black;
 }
 
 .spot-actions {

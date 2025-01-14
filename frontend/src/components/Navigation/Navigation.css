@@ -24,11 +24,4 @@
     display: inline-block; /* Makes the list items horizontal */
   }
   
-  /* Optional: Add responsiveness for smaller screens */
-  @media (max-width: 768px) {
-    .nav-wrapper {
-      flex-direction: column;  /* Stacks items vertically on smaller screens */
-      align-items: flex-start; /* Aligns items to the left */
-    }
-  }
   

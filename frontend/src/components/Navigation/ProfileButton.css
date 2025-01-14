@@ -1,11 +1,11 @@
 .menu-button {
-    background: pink;
+    background: teal;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
     font-size: 32px;
-    color: aqua;
+    color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     /* Add some spacing for better visual appearance */
@@ -14,7 +14,8 @@
   }
   
   .menu-button:hover {
-    color:teal;
+    color:pink;
+    background-color: pink;
   }
   
   .profile-dropdown {
@@ -41,8 +42,8 @@
   }
   
   .profile-dropdown li:hover {
-    background-color: #3DC6C1;
-    color: #333333;
+    background-color: teal;
+    color: pink;
   }
   
   .profile-dropdown.hidden {
@@ -62,12 +63,12 @@
   }
   
   .profile-dropdown a[href="/spots/current"] {
-    color: black;
+    color: whitesmoke;
     /* Ensure the 'Manage Spots' link is white */
   }
   
   .profile-dropdown a[href="/spots/current"]:hover {
-    color: #ccc;
+    color: pink;
     /* Optional: lighter color on hover */
   }
   
