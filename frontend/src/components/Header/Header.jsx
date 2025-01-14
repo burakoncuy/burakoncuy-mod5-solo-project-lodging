@@ -6,7 +6,7 @@ const Header = ({ isLoaded, sessionUser }) => {
   return (
     <header className="header">
       <Link to="/">
-        <img src="/logo.png" alt="HomeHopper Logo" className="logo" />
+        <img src="/logo.png" alt="Lodging Logo" className="logo" />
       </Link>
       <nav className="nav">
         <ul className="navigation">

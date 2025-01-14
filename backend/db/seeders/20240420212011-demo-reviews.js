@@ -15,7 +15,7 @@ module.exports = {
       {
         spotId: 1,
         userId: 1,
-        review: "Went skiing, hiking, and played in the snow!",
+        review: "We had a great time and really enjoyed our time in the cabin. Everything was as described and we couldn't be happier with the accommodations",
         stars: 5,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -23,7 +23,7 @@ module.exports = {
       {
         spotId: 2,
         userId: 2,
-        review: "Moden art made me feel like I was in a museum! Was so much fun.",
+        review: "Amazing architecture in a secluded forest. Uses sustainable energy for electricity and heating. Hits both our aesthetic senses and personal values. Highly recommended.",
         stars: 4,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -31,7 +31,7 @@ module.exports = {
       {
         spotId: 3,
         userId: 6,
-        review: "Truly the American Dream. Neighborhood living never felt better.",
+        review: "I would definitely come back. The loft is beautiful, I didn't need to leave the property as I had everything I was looking for to relax. Privacy was what I valued most about my stay. ",
         stars: 5,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -39,7 +39,7 @@ module.exports = {
       {
         spotId: 4,
         userId: 5,
-        review: "Huge house but was way too expensive!",
+        review: "This property was beautiful and impressively clean, exactly as shown in the photos.",
         stars: 3,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -47,7 +47,7 @@ module.exports = {
  {
         spotId: 3,
         userId: 1,
-        review: "Was an amazing adventure. Our family was so impressed can't wait to come back!",
+        review: "It was quite, beautiful light and just what I was looking for to feel at home,",
         stars: 5,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -55,7 +55,7 @@ module.exports = {
   {
         spotId: 6,
         userId: 3,
-        review: "The seaside views were breathtaking, and the cottage was cozy and charming.",
+        review: "Beautiful property, well maintained and with everything you need to enjoy a great vacation.",
         stars: 5,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -63,7 +63,7 @@ module.exports = {
       {
         spotId: 7,
         userId: 4,
-        review: "A stylish apartment with amazing city views and all the amenities I needed.",
+        review: "Absolutely perfect and a great gem that I would recommend to others. Definitely would book again the next time",
         stars: 4,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -71,7 +71,7 @@ module.exports = {
       {
         spotId: 8,
         userId: 5,
-        review: "Great location in downtown Houston, cozy and comfortable studio apartment.",
+        review: "This is the coolest place I have ever stayed. If this is what I could live in all the time, I would. The care that went into this renovation is readily apparent",
         stars: 4,
         createdAt: new Date(),
         updatedAt: new Date()
