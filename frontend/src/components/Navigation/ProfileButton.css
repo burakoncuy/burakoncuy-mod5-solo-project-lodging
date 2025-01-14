@@ -62,7 +62,7 @@
   }
   
   .profile-dropdown a[href="/spots/current"] {
-    color: whitesmoke;
+    color: black;
     /* Ensure the 'Manage Spots' link is white */
   }
   
