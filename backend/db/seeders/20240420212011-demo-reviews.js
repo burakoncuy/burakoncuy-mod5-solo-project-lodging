@@ -75,6 +75,14 @@ module.exports = {
         stars: 4,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        userId: 2,
+        review: "The house was super amazing even better than the pictures. The host was easy to get in contact with and always very helpful! Our group had an amazing time everyone loved the house!",
+        stars: 4,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
 
     ], { validate: true });

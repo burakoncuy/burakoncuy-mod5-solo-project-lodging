@@ -9,6 +9,7 @@ const ReviewForm = ({ spotId, reviewId = null, initialReview = '', initialStars 
   const { closeModal } = useModal();
   const [review, setReview] = useState(initialReview);
   const [stars, setStars] = useState(initialStars);
+  const [hoverStars, setHoverStars] = useState(0); // State for hover effect
   const [errors, setErrors] = useState({});
   const [backendError, setBackendError] = useState('');
 
@@ -69,7 +70,9 @@ const ReviewForm = ({ spotId, reviewId = null, initialReview = '', initialStars 
           {[1, 2, 3, 4, 5].map((star) => (
             <span
               key={star}
-              className={star <= stars ? 'star filled' : 'star'}
+              className={star <= (hoverStars || stars) ? 'star filled' : 'star'}
+              onMouseEnter={() => setHoverStars(star)}
+              onMouseLeave={() => setHoverStars(0)}
               onClick={() => setStars(star)}
             >
               ★

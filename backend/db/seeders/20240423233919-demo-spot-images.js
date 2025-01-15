@@ -296,6 +296,41 @@ module.exports = {
         preview: false,
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        url: 'https://a0.muscache.com/im/pictures/miso/Hosting-53970983/original/e4c1e526-8278-48f1-946d-6e11e7c0206e.jpeg?im_w=1440&im_format=avif',
+        preview: true,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        url: 'https://a0.muscache.com/im/pictures/miso/Hosting-53970983/original/e38bc6a2-c48f-4ee9-99e8-a09d0f31bfd5.jpeg?im_w=1440&im_format=avif',
+        preview: false,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        url: 'https://a0.muscache.com/im/pictures/miso/Hosting-53970983/original/333644d8-4492-4071-992e-95042b126bb7.jpeg?im_w=1440&im_format=avif',
+        preview: false,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        url: 'https://a0.muscache.com/im/pictures/miso/Hosting-53970983/original/876348ee-1683-4634-b374-af4d73125afe.jpeg?im_w=1440&im_format=avif',
+        preview: false,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        spotId: 9,
+        url: 'https://a0.muscache.com/im/pictures/miso/Hosting-53970983/original/45a0a102-0026-4490-aacd-23c30de8ff84.jpeg?im_w=1440&im_format=avif',
+        preview: false,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ], { validate: true });
   },

@@ -121,7 +121,7 @@
 }
 
 .spot-detail h1 {
-  color: black;
+  color: pink;
   font-size: 2.2em;
   margin-bottom: 10px;
   text-align: left;
@@ -206,3 +206,11 @@ div.spot-info{
   background-color: transparent;
 }
 
+.no-reviews-text {
+  color:coral;
+  font-size: larger;
+}
+
+.spot-info .hosted-by {
+  color:pink;
+}

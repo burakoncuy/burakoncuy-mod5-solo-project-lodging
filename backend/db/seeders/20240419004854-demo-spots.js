@@ -32,7 +32,7 @@ module.exports = {
         country: "United States of America",
         lat: 37.832492,
         lng: -122.283468,
-        name: "CArchitectural wonder in the woods",
+        name: "Architectural wonder in the woods",
         description: "Unique experience, secluded.Enjoy a weekend or a few days eco-friendly retreat in an architectural, geometric masterpiece on 30 preserved acres just minutes from all that Rhinebeck and the Hudson Valley have to offer.",
         price: 325,
         createdAt: new Date(),
@@ -47,7 +47,7 @@ module.exports = {
         lat: 34.052235,
         lng: -118.243683,
         name: "New penthouse with private pool.",
-        description: "you will enjoy the perfect balance of tranquility and convenience. Whether you are here to relax or explore, this penthouse is the ultimate getaway.",
+        description: "You will enjoy the perfect balance of tranquility and convenience. Whether you are here to relax or explore, this penthouse is the ultimate getaway.",
         price: 385,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -122,6 +122,20 @@ module.exports = {
         name: "Amazing Bosphorus View",
         description: "The flat is on the 3rd floor and can accommodate up to 5 people. The building and the flat itself maintain it's magical 19th century spirit.",
         price: 285,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        ownerId: 4,
+        address: "Willow Ln",
+        city: "Miami",
+        state: "FL",
+        country: "United States of America",
+        lat: 21.256383,
+        lng: -105.243683,
+        name: "Villa Calabassa on the Water",
+        description: "Villa Calabassa is a unique work of archotecture and art. Located in the central and  beautiful neighborhood of Miaim Shores, Calabassa offers open spaces, tasteful design and plenty of room for your group.",
+        price: 675,
         createdAt: new Date(),
         updatedAt: new Date()
       }
