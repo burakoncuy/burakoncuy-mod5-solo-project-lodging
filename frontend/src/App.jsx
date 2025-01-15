@@ -9,6 +9,7 @@ import ManageSpots from './components/ManageSpots/ManageSpots';
 import UpdateSpotForm from './components/UpdateSpotForm/UpdateSpotForm'
 import * as sessionActions from './store/session';
 
+
 function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
        {
         path: '/spots/current',
         element: <ManageSpots />
+      },
+      {
+        path: '*',
+        element: <Spots/>
       },
     ]
   }

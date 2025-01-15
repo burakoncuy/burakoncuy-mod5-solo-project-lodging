@@ -1,5 +1,6 @@
 .manage-spots-page {
   text-align: center;
+  margin-right: 200px;
 }
 
 .spots-list {
@@ -11,13 +12,16 @@
 
 .no-spots {
   margin-top: 20px;
+  color: red;
+  margin-right: 20px;
 }
 
 .create-new-spot-link {
   display: inline-block;
   margin-top: 20px;
+  margin-left: 60px;
   padding: 10px 20px;
-  background-color: #3DC6C1;
+  background-color: teal;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -27,3 +31,4 @@
 .create-new-spot-link:hover {
   background-color:pink;
 }
+

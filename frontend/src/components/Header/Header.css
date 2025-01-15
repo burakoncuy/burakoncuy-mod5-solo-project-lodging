@@ -21,6 +21,9 @@
   font-weight: 600;
   color: #000;
 }
+.center-text-link:hover {
+  color:pink;
+}
 
 .profile-section {
   display: flex;
@@ -51,6 +54,7 @@
 
 .create-new-spot-link:hover {
   text-decoration: underline;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-container {
@@ -65,5 +69,7 @@ a.center-text-link{
   color: teal;
   font-style: italic;
   font-size: xx-large;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bolder;
 }
