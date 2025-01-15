@@ -52,7 +52,7 @@ const router = createBrowserRouter([
        {
         path: '/spots/current',
         element: <ManageSpots />
-      }
+      },
     ]
   }
 ]);

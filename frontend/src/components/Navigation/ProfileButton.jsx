@@ -43,6 +43,10 @@ function ProfileButton({ user }) {
     navigate('/');
   };
 
+  const handleManageReviews = () => {
+    alert('Feature is coming soon!!');
+  };
+
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
   return (
@@ -59,6 +63,9 @@ function ProfileButton({ user }) {
             <li>{user.email}</li>
             <li>
               <NavLink to="/spots/current" onClick={closeMenu}>Manage Spots</NavLink>
+            </li>
+            <li>
+              <span className="clickable-text" onClick={handleManageReviews}>Manage Reviews</span>
             </li>
             <li>
               <button onClick={logout}>Log Out</button>

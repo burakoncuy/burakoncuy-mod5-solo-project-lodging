@@ -14,12 +14,17 @@
   flex-direction: column;
 }
 
+.spot-tile:hover{
+  font-size: 30px;
+}
+
 .spot-tile img {
   width: 100%;
   height: 200px;
   /* Adjusted height for images */
   object-fit: cover;
 }
+
 
 .spot-info {
   padding: 10px;
@@ -79,3 +84,25 @@
  div spot-info .p{
   color:red;
  }
+
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.7rem;
+  white-space: nowrap;
+  z-index: 10;
+  transform: translateY(-100%);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.spot-tile:hover .tooltip {
+  display: block;
+}
+
+.spot-name {
+  position: relative;
+}
