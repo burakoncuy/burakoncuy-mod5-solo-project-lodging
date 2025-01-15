@@ -35,10 +35,14 @@ const SpotCard = ({ spot, onClick, onDelete }) => {
     >
       <img src={previewImageUrl} alt={spot.name} />
       <div className="spot-info">
-        <h3 className="spot-name">
-
-          {showTooltip && <span className="tooltip">{spot.name}</span>}
-        </h3>
+      <h3 className="spot-name">
+  {/* {spot.name} */}
+  {showTooltip && (
+    <span className="tooltip">
+      {spot.name}
+    </span>
+  )}
+</h3>
         <p>{spot.city}, {spot.state}</p>
         <p>${spot.price} / night</p>
         <p className="average-rating">{averageRating} ★</p>
