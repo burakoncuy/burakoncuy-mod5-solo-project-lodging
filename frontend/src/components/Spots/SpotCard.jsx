@@ -36,16 +36,17 @@ const SpotCard = ({ spot, onClick, onDelete }) => {
       <img src={previewImageUrl} alt={spot.name} />
       <div className="spot-info">
       <h3 className="spot-name">
-  {/* {spot.name} */}
-  {showTooltip && (
-    <span className="tooltip">
+      {showTooltip && (
+      <span className="tooltip">
       {spot.name}
-    </span>
-  )}
-</h3>
+      </span>
+      )}
+      </h3>
+      <div className='first'>
         <p>{spot.city}, {spot.state}</p>
-        <p>${spot.price} / night</p>
         <p className="average-rating">{averageRating} ★</p>
+        </div>
+        <p className='price'>${spot.price} / night</p>
         {isManageSpotsPage && (
           <div className="spot-actions">
             <button className="update-button" onClick={handleUpdateClick}>Update</button>

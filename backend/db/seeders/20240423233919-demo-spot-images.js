@@ -117,42 +117,35 @@ module.exports = {
       },
       {
         spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/35c6248f-175c-4782-90d1-27a38f955b7c.jpeg?im_w=1200&im_format=avif',
+        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1270271121470508084/original/32a04d8d-f720-4ed9-8626-876ce43b0d90.jpeg?im_w=1440&im_format=avif',
         preview: true,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/94544f66-db5b-42e1-bbf2-0703d5146897.jpeg?im_w=1200&im_format=avif',
+        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1270271121470508084/original/1541148b-45f0-48d7-a31e-3365485099f1.jpeg?im_w=1440&im_format=avif',
         preview: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/13ee0430-fe66-4565-918d-530ed6fe3889.jpeg?im_w=1440&im_format=avif',
+        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1270271121470508084/original/9e526730-eeda-42f9-8a30-ed60cef26f42.jpeg?im_w=1200&im_format=avif',
         preview: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/e45f2017-79f4-4f41-886f-2c5ae7af6142.jpeg?im_w=1440&im_format=avif',
+        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1270271121470508084/original/5e7a5c79-3eca-4b44-b2cf-af8cce039e7f.jpeg?im_w=1440&im_format=avif',
         preview: false,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/c8c17858-c46c-4864-80fc-cdda1586d282.png?im_w=1440&im_format=avif',
-        preview: false,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        spotId: 1,
-        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-982015015526224217/original/d67ac93f-842a-468e-999e-1fdc24767319.jpeg?im_w=1440&im_format=avif',
+        url: 'https://a0.muscache.com/im/pictures/hosting/Hosting-1270271121470508084/original/30fbbf71-99c5-4ae9-ab01-1477eef6b994.jpeg?im_w=1440&im_format=avif',
         preview: false,
         createdAt: new Date(),
         updatedAt: new Date()

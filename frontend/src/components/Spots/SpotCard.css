@@ -58,3 +58,13 @@
   display: block;
   opacity: 1;
 }
+
+.first {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+
+.price {
+  font-size: 30px;
+}

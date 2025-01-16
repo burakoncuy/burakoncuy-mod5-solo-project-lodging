@@ -18,8 +18,8 @@ module.exports = {
         country: "United States of America",
         lat: 37.7645358,
         lng: -122.4730327,
-        name: "Modern Nordic Designed Cabin",
-        description: "Newly designed Modern Nordic Cabin. Escape to the tranquility of the mountains and lakes.",
+        name: "Hillside Haven",
+        description: "Kick back & relax in this newly built A-frame cabin with an outdoor space featuring a large deck overlooking the hillside. Enjoy the custom made cedarwood sauna, hot tub, firepit with hanging egg chairs while listening to the beautiful waterfall feature.",
         price: 215,
         createdAt: new Date(),
         updatedAt: new Date()
