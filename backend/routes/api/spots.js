@@ -387,8 +387,8 @@ const validateSpotUpdate = [
   check('city').not().isEmpty().withMessage('City is required'),
   check('state').not().isEmpty().withMessage('State is required'),
   check('country').not().isEmpty().withMessage('Country is required'),
-  check('lat').isFloat({ min: -90, max: 90 }).withMessage('Latitude must be within -90 and 90'),
-  check('lng').isFloat({ min: -180, max: 180 }).withMessage('Longitude must be within -180 and 180'),
+  // check('lat').isFloat({ min: -90, max: 90 }).withMessage('Latitude must be within -90 and 90'),             // To allow update for new signed-up user 
+  // check('lng').isFloat({ min: -180, max: 180 }).withMessage('Longitude must be within -180 and 180'),        //  To allow update for new signed-up user
   check('name').isLength({ min: 5, max: 50 }).withMessage('Name must be more than 5 characters and less than 50 characters'),
   check('description').not().isEmpty().withMessage('Description is required'),
   check('price').isFloat({ min: 0 }).withMessage('Price per day must be a positive number'),
