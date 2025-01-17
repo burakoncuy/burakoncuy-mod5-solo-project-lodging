@@ -96,7 +96,7 @@ Lodging is a comprehensive full-stack web application modeled after Airbnb. It r
     npm run dev
     ```
 
-- Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+- Open your browser and navigate to [http://localhost:5173](http://localhost:5173) to view the application.
 
 ## Usage
 
