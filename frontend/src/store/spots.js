@@ -151,34 +151,9 @@ export const createImage = (spotId, imageUrl, isPreview) => async () => {
   }
 };
 
-// export const updateSpot = (spotId, spotData) => async (dispatch) => {
-//   try {
-    
-//     const response = await csrfFetch(`/api/spots/${spotId}`, {
-//       method: 'PUT',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(spotData),
-//     });
-
-//     if (!response.ok) {
-//       const errorData = await response.json();
-//       console.error("Error response data:", errorData); // Log the error data
-//       throw new Error(errorData.message || 'Failed to update spot');
-//     }
-
-//     const updatedSpot = await response.json();
-//     dispatch(updateSpotSuccess(updatedSpot));
-//     return updatedSpot;
-//   } catch (error) {
-//     console.error("Error updating spot:", error);
-//     throw error;
-//   }
-// };
-
 export const updateSpot = (spotId, spotData) => async (dispatch) => {
   try {
+    
     const response = await csrfFetch(`/api/spots/${spotId}`, {
       method: 'PUT',
       headers: {
@@ -189,7 +164,7 @@ export const updateSpot = (spotId, spotData) => async (dispatch) => {
 
     if (!response.ok) {
       const errorData = await response.json();
-      console.error('Update error:', errorData);
+      console.error("Error response data:", errorData); // Log the error data
       throw new Error(errorData.message || 'Failed to update spot');
     }
 
@@ -197,7 +172,7 @@ export const updateSpot = (spotId, spotData) => async (dispatch) => {
     dispatch(updateSpotSuccess(updatedSpot));
     return updatedSpot;
   } catch (error) {
-    console.error('Error updating spot:', error.message);
+    console.error("Error updating spot:", error);
     throw error;
   }
 };
